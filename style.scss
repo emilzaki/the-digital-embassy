@@ -1,0 +1,279 @@
+// Colors
+$primaryBg: #181818;
+$secondyBg: #000;
+$highlight: #CC0000;
+
+// Reset
+a {color:inherit;text-decoration:none;
+    &:hover {color:$highlight}
+}
+ul {list-style: none; margin:0; padding: 0;}
+
+// Fonts
+$small: 12px;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {font-family: Roboto;}
+// Header
+.main-menu-container{padding:0 30px;}
+.navbar {box-shadow: 1px 1px 1px #ccc;}
+.main-logo img {width:80px}
+.main-menu li {
+                margin-right:15px;
+                &:last-child {margin-right:0}
+            
+            }
+
+.main-menu a {
+                color:$secondyBg !important;
+                text-transform: uppercase;
+
+                &:hover {color:$highlight !important}
+            }
+
+
+.navbar-light .navbar-toggler {
+    border-color: $secondyBg !important;
+}           
+
+// About
+
+.about-container {
+   padding: 100px 0;
+    text-align: center;
+    font-size: 4vw;
+}
+
+.about-carousel {
+     
+    position: relative;
+    
+    .owl-nav {
+        font-size: 70px;
+        position:absolute;
+        width: 100%;
+        height:100%;
+        top:0;
+    }
+
+    .owl-dots .owl-dot {
+        width:15px; 
+        height:15px; 
+        border-radius: 50%; 
+        background-color:$highlight;
+        margin:0 7px;
+    }
+
+    .owl-dots .owl-dot.active {background-color: $secondyBg;}
+
+    .owl-nav button {  
+        height:100%;
+        &:hover {
+            color: $highlight;
+        }       
+    } 
+
+    .owl-nav .owl-next {float: right;}
+    .owl-nav .owl-prev {float: left;}
+}
+
+
+// Our Company
+.our-company-container {
+    text-align:  center;
+    text-transform: uppercase;
+    padding: 80px 0;
+    margin-bottom: 60px;
+    background:url("img/our-company.jpg") no-repeat center;
+    background-size: cover;
+    //background-attachment: fixed;
+    color:#fff;
+
+    h1 {
+        font-weight: bold;
+        margin-bottom: 50px;
+    }
+
+    ul li {
+        display: inline-block;
+        //margin-left:50px;
+        //&:first-child {margin-left: 0;}
+    }
+
+    ul li i {
+        padding:50px;
+        margin-bottom: 20px;
+        border-radius: 50%;
+        font-size: 30px;
+        color:$highlight;   
+        background-color: rgba($color: #ffffff, $alpha: 0.7);
+        
+    }
+
+    
+}
+
+// Our services
+
+.our-services-header {
+    text-align: center;
+    text-transform: uppercase;
+    padding:30px 0;
+    
+    h1 {
+        font-weight: bold;
+    }
+}
+
+.services-carousel {
+    padding:30px 0;
+    position:relative;
+    .item {
+        text-align: center;
+        h1 {
+            text-transform: uppercase;
+            font-size: 22px;
+            margin-top: 25px;
+            
+        }
+        img {
+            width:200px;
+            height:200px;
+            margin:0 auto;
+            border-radius: 50%;
+            box-shadow: 0px 0px 5px #ccc;
+        }
+        
+    }
+    .owl-nav {
+            font-size: 70px;
+            position:absolute;
+            width: 100%;
+            height:100%;
+            top:0;
+        }
+
+    .owl-nav button {  
+        height:100%;
+        &:hover {
+            color: $highlight;
+        }       
+    }    
+    .owl-nav .owl-next {float: right;}
+}
+
+// Contact us
+.contacts-wrapper {
+    padding:30px 0
+}
+
+.contacts-header {
+    text-align:  center;
+    text-transform: uppercase;
+    padding: 100px 0;
+    margin-bottom: 60px;
+    background:url("img/contacts-header-crop.jpg") no-repeat center;
+    background-size: cover;
+    color:#fff;
+
+    h1 {
+        font-weight: bold;
+    }
+}
+
+.contact-form-container {
+
+    padding-bottom: 50px;
+
+    .form-group{
+        margin-bottom: 20px;
+    }
+    .btn {
+        background-color: $secondyBg;
+        text-transform: uppercase;
+        padding:10px 35px;
+        border: none;
+        &:hover{ background-color: $highlight;}
+    }
+}
+
+.contacts-container {
+
+    .socialmedia {margin-top:15px}
+    .socialmedia li {
+        display: inline-block;
+        margin-right: 10px;
+    }
+
+    .socialmedia li i {
+        color: $secondyBg;
+        font-size: 20px;
+        &:hover {color:$highlight}
+    }
+
+    .fa-solid {margin-right: 10px;}
+    .fa-mobile-screen-button {
+        font-size: 16px;
+    }
+    .fa-phone {
+        font-size: 14px;
+    }
+}
+
+// Footer 
+.footer-container {
+    background-color: $primaryBg;
+    color:#fff;
+    text-align: center;
+    padding: 25px 0;
+
+    .main-logo {
+        display: block;
+        margin:20px 0 40px 0;
+    }
+
+    ul.socialmedia li {
+        display: inline-block;
+    
+    }
+
+    ul.socialmedia li i {
+        font-size: 26px;
+        color: #fff;
+        margin: 0 14px;
+    }
+}
+
+
+
+.copyright-container {
+    background-color: $secondyBg;
+    padding: 10px 0;
+    text-align: center;
+    color:#fff;
+    font-family: Roboto;
+    font-size: $small;
+}
+
+
+// resposive 
+
+@media only screen and (max-width: 992px) { 
+
+     // Our Company
+     .our-company-container ul li {
+        
+       // margin-left:15px;
+        
+    }
+}
+
+@media only screen and (min-width: 600px) { 
+    // About
+    .about-container {
+       
+         font-size: 3vw;
+     }
+
+     
+}
